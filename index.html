@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Darliane R. Cunha — CV</title>
+  <meta name="description" content="Personal site with CV, publications, projects and contact details for Darliane Ribeiro Cunha." />
+  <style>
+    :root{
+      --bg:#0b1020; --card:#111731; --muted:#9fb0d3; --accent:#9bffef; --ink:#e9f0ff; --chip:#1a2243;
+      --tab:#0f1633; --tab-active:#1b2550;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;line-height:1.6}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:1100px;margin:0 auto;padding:28px}
+    header.hero{background:linear-gradient(135deg,#152250,#0e1632);border:1px solid rgba(255,255,255,.08);box-shadow:0 20px 40px rgba(0,0,0,.35);border-radius:18px;padding:24px 24px;margin:18px 0 18px}
+    .topbar{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
+    h1{margin:0 0 6px;font-weight:800;letter-spacing:.2px}
+    .role{margin:0;color:var(--muted)}
+    .contact-inline{display:flex;gap:10px;flex-wrap:wrap;margin-top:8px}
+    .contact-inline a{padding:6px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.04)}
+    .tabs{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+    .tabs a{padding:8px 12px;border-radius:12px;background:var(--tab);border:1px solid rgba(255,255,255,.12)}
+    .tabs a.active{background:var(--tab-active);box-shadow:0 6px 14px rgba(0,0,0,.25)}
+    section.page{display:none;margin:22px 0}
+    section.page.active{display:block}
+    .card{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:20px;box-shadow:0 10px 24px rgba(0,0,0,.25)}
+    .title{font-size:1.12rem;margin:.2rem 0 .6rem;font-weight:700}
+    .grid{display:grid;grid-template-columns:1fr;gap:18px}
+    @media (min-width:900px){.grid{grid-template-columns:1fr 1fr}}
+    ul.clean{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+    .pill{font-size:.78rem;padding:3px 8px;border-radius:999px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.03);color:#cfe0ff}
+    .kw-chips{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
+    .kw-chip{font-size:.75rem;padding:3px 8px;border-radius:999px;border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.08);color:#ffffff;white-space:nowrap}
+    .muted{color:var(--muted)}
+    footer{opacity:.8;color:var(--muted);margin:28px 0 8px;text-align:center}
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <header class="hero" role="banner">
+    <div class="topbar">
+      <div>
+        <h1>Darliane Ribeiro Cunha</h1>
+        <p class="role">Data Scientist & Researcher in Port Sustainability</p>
+        <div class="contact-inline">
+          <a href="mailto:darlianerc@gmail.com">E‑mail</a>
+          <a href="https://www.linkedin.com/in/darlianecunha/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://github.com/darlianecunha" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://scholar.google.com/citations?user=BGRlXo0AAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+        </div>
+      </div>
+    </div>
+    <nav class="tabs" aria-label="Site sections">
+      <a href="#summary" data-page="summary" class="active">Summary</a>
+      <a href="#experience" data-page="experience">Experience</a>
+      <a href="#skills" data-page="skills">Skills</a>
+      <a href="#education" data-page="education">Education</a>
+      <a href="#projects" data-page="projects">Projects</a>
+      <a href="#publications" data-page="publications">Publications</a>
+      <a href="#certifications" data-page="certifications">Certifications</a>
+      <a href="#contact" data-page="contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- SUMMARY -->
+  <section id="summary" class="page active" aria-labelledby="summary-t">
+    <article class="card">
+      <h2 class="title" id="summary-t">Summary</h2>
+      <p><span class="muted" style="font-weight:600; letter-spacing:.08em">SUMMARY</span></p>
+      <p>Postdoctoral researcher at Erasmus University Rotterdam (2024–2025), with previous experience at the Autonomous University of Barcelona (2017–2018). I hold a PhD in Accounting and Finance (University of Zaragoza, 2016) and an MSc in Accounting (University of São Paulo, 2002). With over 24 years of academic experience, I have served as a lecturer and professor, combining teaching and course coordination with a strong research trajectory since 2019.</p>
+      <p>My work focuses on sustainability in the port sector, with publications in internationally recognised journals indexed in Web of Science and Scopus. I have secured competitive research funding in Brazil (CNPq, FAPEMA), led interdisciplinary projects, and actively contribute to the preparation of COP 30 through a national project aimed at developing sustainable port infrastructure in Belém.</p>
+      <p>My research integrates academic rigour with technological innovation, particularly through the use of Python and text mining for data analysis and sustainability reporting. Current research interests include the Sustainable Development Goals (SDGs), renewable energy, port decarbonisation, and environmental disclosure, reflecting a commitment to supporting global sustainability transitions.</p>
+    </article>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="page" aria-labelledby="exp-t">
+    <article class="card">
+      <h2 class="title" id="exp-t">Experience</h2>
+      <div class="grid">
+        <div>
+          <div class="pill">03/2022 – Present · Observatório Portuário · Brazil</div>
+          <h3>Researcher</h3>
+          <ul class="clean">
+            <li>Applied research in port logistics, maritime sustainability and decarbonisation strategies.</li>
+            <li>Python dashboards (Pandas, Streamlit, Plotly) for flows and emissions analysis.</li>
+            <li>Text mining and content analysis of sustainability reports (NLP).</li>
+          </ul>
+        </div>
+        <div>
+          <div class="pill">08/2010 – Present · Federal University of Maranhão (UFMA) · Brazil</div>
+          <h3>Full‑time Lecturer</h3>
+          <ul class="clean">
+            <li>Principal Investigator on funded projects in sustainability, port logistics and SDGs.</li>
+            <li>Postgraduate teaching integrating data analysis, financial modelling and research methods.</li>
+            <li>Supervision of MSc/PhD research using Python and qualitative analysis.</li>
+          </ul>
+        </div>
+        <div>
+          <div class="pill">11/2024 – 02/2025 · Omdena · Remote</div>
+          <h3>Junior Machine Learning Engineer</h3>
+          <ul class="clean">
+            <li>Computer vision model to detect plastic waste in rivers in India.</li>
+            <li>End‑to‑end detection/classification pipeline and model optimisation.</li>
+            <li>Literature review and ideation in a multidisciplinary team (141 members).</li>
+          </ul>
+        </div>
+        <div>
+          <div class="pill">1998 – 2010 · Consultancy · Brazil</div>
+          <h3>Consultant</h3>
+          <ul class="clean">
+            <li>Financial and strategic consultancy for national and international clients.</li>
+            <li>Economic analysis and performance indicator development.</li>
+          </ul>
+        </div>
+        <div>
+          <div class="pill">2001 – 2008 · Universidade Potiguar · Brazil</div>
+          <h3>Lecturer</h3>
+          <ul class="clean">
+            <li>Courses in accounting, strategy and finance; curriculum development and mentoring.</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="page" aria-labelledby="skills-t">
+    <article class="card">
+      <h2 class="title" id="skills-t">Skills</h2>
+      <div class="kw-chips">
+        <span class="kw-chip">Python</span><span class="kw-chip">Pandas</span><span class="kw-chip">NumPy</span><span class="kw-chip">Streamlit</span><span class="kw-chip">Plotly</span><span class="kw-chip">Matplotlib</span><span class="kw-chip">GitHub</span>
+        <span class="kw-chip">NLP & Text Mining</span><span class="kw-chip">PyMuPDF</span><span class="kw-chip">Regex</span>
+        <span class="kw-chip">EDA & Wrangling</span><span class="kw-chip">Dashboards</span><span class="kw-chip">APIs</span>
+        <span class="kw-chip">Sustainability & SDGs</span><span class="kw-chip">Qualitative analysis</span><span class="kw-chip">SPSS</span><span class="kw-chip">VOSviewer</span>
+        <span class="kw-chip">Scientific communication</span><span class="kw-chip">Project leadership</span>
+      </div>
+      <p class="muted">Languages: Portuguese (native), English (C1), Spanish (C1)</p>
+    </article>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education" class="page" aria-labelledby="edu-t">
+    <article class="card">
+      <h2 class="title" id="edu-t">Education</h2>
+      <ul class="clean">
+        <li><strong>PhD in Accounting & Finance</strong> — University of Zaragoza (Spain), 2016 <span class="muted">(recognised by Nuffic/Dutch authorities, 2024)</span></li>
+        <li><strong>MSc in Accounting</strong> — University of São Paulo (Brazil), 2002</li>
+        <li><strong>Postgraduate Specialisation</strong> — Business & Project Management, PUC Minas (Brazil), 1999</li>
+        <li><strong>Bachelor’s in Business Administration (Accounting)</strong> — Universidade Potiguar (Brazil), 1997</li>
+      </ul>
+    </article>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="page" aria-labelledby="proj-t">
+    <article class="card">
+      <h2 class="title" id="proj-t">Selected Projects</h2>
+      <div class="grid">
+        <div>
+          <div class="pill">12/2023 – Present · FAPEMA</div>
+          <h3>On‑Shore Autonomous Energy Hub for Ships (Itaqui‑MA) — PI</h3>
+          <p>Technical parametrisation of a modular, autonomous on‑shore solution to supply power to berthed cargo ships.</p>
+        </div>
+        <div>
+          <div class="pill">06/2024 – Present · COP‑30 · Belém</div>
+          <h3>International Passenger Terminal (Belém)</h3>
+          <p>Studies and design for hydro‑transport infrastructure to dock cruise ships in the context of COP‑30.</p>
+        </div>
+        <div>
+          <div class="pill">12/2022 – Present · FAPEMA</div>
+          <h3>Green Port Complex — SDG Indicators (PI)</h3>
+          <p>Development of a sustainability index aligned with the SDGs for the Port Complex of Itaqui.</p>
+          <p><a href="https://sdgattributes.streamlit.app" target="_blank" rel="noopener">Index demo (Streamlit)</a></p>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <!-- PUBLICATIONS -->
+  <section id="publications" class="page" aria-labelledby="pub-t">
+    <article class="card">
+      <h2 class="title" id="pub-t">Selected Publications</h2>
+      <ul class="clean">
+        <li><strong>SDG Attributes: A Sustainability Assessment Framework for Brazilian Ports</strong> — <em>Marine Policy</em>, 2025. DOI: <a href="https://doi.org/10.1016/j.marpol.2025.106841" target="_blank" rel="noopener">10.1016/j.marpol.2025.106841</a></li>
+        <li><strong>A Bibliometric Analysis of SDGs in the Maritime Industry and Port Sector</strong> — <em>Regional Studies in Marine Science</em>, 2024. DOI: <a href="https://doi.org/10.1016/j.rsma.2023.103319" target="_blank" rel="noopener">10.1016/j.rsma.2023.103319</a></li>
+        <li><strong>Sustainable Practices in Brazilian Ports: Aligning with SDGs 9, 13, and 14</strong> — <em>RGSA</em>, 2024. DOI: <a href="https://doi.org/10.24857/rgsa.v18n11-096" target="_blank" rel="noopener">10.24857/rgsa.v18n11-096</a></li>
+        <li><strong>Sustainability practices for SDGs: a study of Brazilian ports</strong> — <em>Environment, Development and Sustainability</em>, 2023. DOI: <a href="https://doi.org/10.1007/s10668-023-03126-y" target="_blank" rel="noopener">10.1007/s10668-023-03126-y</a></li>
+        <li><strong>Photovoltaic electronic waste in Brazil: circular economy challenges, potential and obstacles</strong> — <em>SSHO</em>, 2023. DOI: <a href="https://doi.org/10.1016/j.ssaho.2023.100456" target="_blank" rel="noopener">10.1016/j.ssaho.2023.100456</a></li>
+      </ul>
+      <p class="muted">For the full, styled publications page, see the separate “Selected Articles” site.</p>
+    </article>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section id="certifications" class="page" aria-labelledby="cert-t">
+    <article class="card">
+      <h2 class="title" id="cert-t">Certifications</h2>
+      <ul class="clean">
+        <li>Programming for Everybody (Getting Started with Python) — University of Michigan (01/2022)</li>
+        <li>Python Data Structures — University of Michigan (03/2022)</li>
+        <li>Using Python to Access Web Data — University of Michigan (03/2022)</li>
+        <li>Using Databases with Python — University of Michigan (05/2022)</li>
+      </ul>
+    </article>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="page" aria-labelledby="contact-t">
+    <article class="card">
+      <h2 class="title" id="contact-t">Contact</h2>
+      <p>The main contact links are available at the top of the page for quick access.</p>
+      <p>E‑mail: <a href="mailto:darlianerc@gmail.com">darlianerc@gmail.com</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/darlianecunha/" target="_blank" rel="noopener">linkedin.com/in/darlianecunha</a></p>
+      <p>GitHub: <a href="https://github.com/darlianecunha" target="_blank" rel="noopener">github.com/darlianecunha</a></p>
+      <p>Google Scholar: <a href="https://scholar.google.com/citations?user=BGRlXo0AAAAJ" target="_blank" rel="noopener">Google Scholar</a></p>
+    </article>
+  </section>
+
+  <footer>
+    <p>© 2025 · Publish this file as <span class="mono">index.html</span> on GitHub Pages.</p>
+  </footer>
+</div>
+<script>
+  const tabs = document.querySelectorAll('.tabs a');
+  const pages = document.querySelectorAll('section.page');
+  function showPage(hash){
+    const id = (hash||'#summary').replace('#','');
+    pages.forEach(s=>s.classList.toggle('active', s.id===id));
+    tabs.forEach(a=>a.classList.toggle('active', a.dataset.page===id));
+  }
+  window.addEventListener('hashchange', ()=>showPage(location.hash));
+  showPage(location.hash);
+</script>
+</body>
+</html>

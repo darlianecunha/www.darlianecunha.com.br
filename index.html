@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>Darliane Ribeiro Cunha — Academic Profile</title>
-<meta content="Single-page academic portal with tabbed navigation for Darliane Ribeiro Cunha — Sustainable Development &amp; Port Decarbonisation." name="description"/>
+<meta content="Single-page academic portal with tabbed navigation for Darliane Ribeiro Cunha — Sustainable Development & Port Decarbonisation." name="description"/>
 <style>
 /* ===== Design Tokens ===== */
 :root{
@@ -115,7 +114,7 @@ a:hover{ text-decoration:underline }
           Brazil
         </span>
 <a class="chip" href="mailto:darlianerc@gmail.com" title="Email">
-<svg aria-hidden="true" fill="currentColor" viewbox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v1.2l10 5.6 10-5.6V6a2 2 0 0 0-2-2Zm0 6.2-8 4.5-8-4.5V18a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V10.2Z"></path></svg>
+<svg aria-hidden="true" fill="currentColor" viewbox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v1.2l10 5.6 10-5.6V6a2 2 0 0 0 2-2Zm0 6.2-8 4.5-8-4.5V18a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V10.2Z"></path></svg>
           darlianerc@gmail.com
         </a>
 <a class="chip" href="https://www.darlianecunha.com.br" rel="noopener" target="_blank" title="Website">
@@ -158,10 +157,10 @@ a:hover{ text-decoration:underline }
 <li><a aria-controls="panel-publications" href="#publications" id="tab-publications" role="tab">Publications</a></li>
 <li><a aria-controls="panel-skills" href="#skills" id="tab-skills" role="tab">Skills</a></li>
 <li><a aria-controls="panel-review" href="#review" id="tab-review" role="tab">Collaborations &amp; Review</a></li>
-<li><a aria-controls="panel-languages" href="#languages" id="tab-languages" role="tab">Languages</a></li>
+<li><a aria-controls="panel-tools" href="#tools" id="tab-tools" role="tab">Tools</a></li>
 </ul>
 <!-- Panels -->
-<div aria-labelledby="tab-summary" class="panel" id="panel-summary" role="tabpanel">
+<div aria-labelledby="tab-summary" class="panel active" id="panel-summary" role="tabpanel">
 <div class="block">
 <h3>Professional Summary</h3>
 <p>Postdoctoral Researcher at Erasmus University Rotterdam (2024–2025), with previous experience at the Autonomous University of Barcelona (2017–2018).
@@ -243,26 +242,41 @@ a:hover{ text-decoration:underline }
 </div>
 </div>
 </div>
+
+<!-- Combined Skills + Languages -->
 <div aria-labelledby="tab-skills" class="panel" id="panel-skills" role="tabpanel">
-<div class="grid grid-3">
-<div class="block"><h3>Data &amp; Analytics</h3><p>Python · Pandas · Matplotlib · Plotly · NLP · Text Mining · SPSS · VOSviewer</p></div>
-<div class="block"><h3>Apps &amp; Dashboards</h3><p>Streamlit · Dashboard Development · Interactive Visualisation</p></div>
-<div class="block"><h3>Domains &amp; Methods</h3><p>Sustainability &amp; SDG Indicators · Port Decarbonisation · Academic Writing · Research Leadership</p></div>
+  <div class="grid grid-3">
+    <div class="block"><h3>Data &amp; Analytics</h3><p>Python · Pandas · Matplotlib · Plotly · NLP · Text Mining · SPSS · VOSviewer</p></div>
+    <div class="block"><h3>Apps &amp; Dashboards</h3><p>Streamlit · Dashboard Development · Interactive Visualisation</p></div>
+    <div class="block"><h3>Domains &amp; Methods</h3><p>Sustainability &amp; SDG Indicators · Port Decarbonisation · Academic Writing · Research Leadership</p></div>
+  </div>
+
+  <!-- Languages moved here (bottom of Skills) -->
+  <div class="block" style="margin-top:16px">
+    <h3>Languages</h3>
+    <div class="grid grid-3">
+      <div class="block"><h3>Portuguese</h3><div class="meta">Native</div></div>
+      <div class="block"><h3>English</h3><div class="meta">C1</div></div>
+      <div class="block"><h3>Spanish</h3><div class="meta">C1</div></div>
+    </div>
+  </div>
 </div>
-</div>
+
 <div aria-labelledby="tab-review" class="panel" id="panel-review" role="tabpanel"><div class="block">
 <h3>Peer Review &amp; Editorial Service</h3>
 <p>Reviewer for international journals indexed in Web of Science and Scopus, including:
             <em>Journal of Cleaner Production</em>, <em>Advanced Sustainable Systems</em>, <em>Business Strategy and the Environment</em>,
             <em>Energy, Ecology and Environment</em>, <em>Journal of Public Affairs</em>, and <em>Sustainable Development</em>.</p>
 </div><hr style="border:0; border-top:2px solid #cccccc; margin:24px 0;"/><h3>Collaborations</h3><div class="grid grid-2"><div class="block"><h3><a href="http://www.sdghub.com.br" rel="noopener" target="_blank">🌐 SDG Hub</a></h3></div><div class="block"><h3><a href="https://www.labportos.log.br/institucional.html" rel="noopener" target="_blank">🌐 LabPortos</a></h3></div><div class="block"><h3><a href="https://observatorioportuario.com.br/sobre/" rel="noopener" target="_blank">🌐 Observatório Portuário</a></h3></div><div class="block"><h3><a href="https://cess.uff.br/pessoas/" rel="noopener" target="_blank">🌐 CESS</a></h3></div></div></div>
-<div aria-labelledby="tab-languages" class="panel" id="panel-languages" role="tabpanel">
-<div class="grid grid-3">
-<div class="block"><h3>Portuguese</h3><div class="meta">Native</div></div>
-<div class="block"><h3>English</h3><div class="meta">C1</div></div>
-<div class="block"><h3>Spanish</h3><div class="meta">C1</div></div>
+
+<!-- New Tools tab panel -->
+<div aria-labelledby="tab-tools" class="panel" id="panel-tools" role="tabpanel">
+  <div class="block">
+    <h3>Main Tools Developed</h3>
+    <p><a href="https://darlianecunha.github.io/tools/" target="_blank" rel="noopener">https://darlianecunha.github.io/tools/</a></p>
+  </div>
 </div>
-</div>
+
 </section>
 </div>
 <script>

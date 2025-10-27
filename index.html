@@ -6,7 +6,6 @@
 <title>Darliane Ribeiro Cunha — Academic Profile</title>
 <meta content="Single-page academic portal with tabbed navigation for Darliane Ribeiro Cunha — Sustainable Development & Port Decarbonisation." name="description"/>
 <style>
-/* ===== Design Tokens ===== */
 :root{
   --bg:#0b1020;
   --surface:#10172b;
@@ -30,7 +29,6 @@ a:hover{ text-decoration:underline }
 
 .container{ width:min(1100px,94vw); margin:22px auto 64px; }
 
-/* ===== Header ===== */
 .header{
   display:grid; gap:14px; padding:22px;
   background:linear-gradient(180deg,#121a31 0%,#0f162b 100%);
@@ -46,13 +44,11 @@ a:hover{ text-decoration:underline }
 }
 .subtitle{ margin:0; color:var(--muted); font-size:clamp(1rem,1.6vw,1.05rem) }
 
-/* contact chips */
 .chips{ display:flex; flex-wrap:wrap; gap:.5rem; margin-top:.6rem }
 .chip{ display:inline-flex; align-items:center; gap:.5rem; padding:.4rem .65rem; border-radius:999px;
   border:1px solid #2b3a66; background:var(--pill); color:var(--muted); font-size:.92rem; white-space:nowrap }
 .chip svg{ width:.95rem; height:.95rem; opacity:.85 }
 
-/* ===== Tabs (like pages) ===== */
 .tabs{
   margin-top:14px;
   border:1px solid var(--line);
@@ -78,21 +74,69 @@ a:hover{ text-decoration:underline }
 .panel.active{ display:block; animation:fade .22s ease-out }
 @keyframes fade{ from{opacity:0; transform:translateY(6px)} to{opacity:1; transform:none} }
 
-/* ===== Content blocks ===== */
-.block{ border:1px solid #1e2a52; border-radius:14px; background:#0f1529; padding:14px; margin:10px 0 }
-.block h3{ margin:.1rem 0 .35rem; font-size:1.05rem }
-.meta{ color:var(--muted); font-size:.92rem; margin:.15rem 0 .6rem }
-.badges{ display:flex; flex-wrap:wrap; gap:.4rem; margin-top:.5rem }
-.badge{ background:var(--pill); border:1px solid #2b3a66; color:var(--muted); padding:.25rem .55rem; border-radius:999px; font-size:.85rem }
-
 .grid{ display:grid; grid-template-columns:1fr; gap:12px }
 @media (min-width: 860px){ .grid-2{ grid-template-columns:1fr 1fr } .grid-3{ grid-template-columns:1fr 1fr 1fr } }
 
-.pub{ display:grid; gap:.15rem; padding:.75rem .9rem; border:1px dashed #2b3a66; border-radius:12px; background:#0e152a }
-.pub .ven{ color:var(--muted); font-size:.9rem }
+.block {
+  box-shadow: 0 0 12px rgba(106,167,255,0.15);
+  padding: 16px;
+  border-radius: 12px;
+  border:1px solid #1e2a52;
+  background:#0f1529;
+  transition: background .3s ease;
+}
+.block:hover {
+  background-color: rgba(22,32,62,0.5);
+}
+
+.block h3{ margin:.1rem 0 .35rem; font-size:1.05rem }
+
+.meta{
+  color:var(--muted);
+  font-size:.9rem;
+  margin:.15rem 0 .75rem;
+  font-weight:500;
+}
+
+.badges{ display:flex; flex-wrap:wrap; gap:.4rem; margin-top:.5rem }
+.badge{
+  background:var(--pill);
+  border:1px solid #2b3a66;
+  color:var(--muted);
+  padding:.25rem .55rem;
+  border-radius:999px;
+  font-size:.85rem
+}
+
+.highlight {
+  color: var(--accent);
+  font-weight: 600;
+}
+.skills {
+  color: var(--muted);
+  font-style: italic;
+}
+
+.styled-list li {
+  margin-bottom: 6px;
+  line-height: 1.5;
+}
+
+.pub {
+  background:#0f1529;
+  border:1px solid #2b3a66;
+  box-shadow:0 0 12px rgba(106,167,255,.12);
+  border-radius:12px;
+  padding:.9rem 1rem;
+  display:grid;
+  gap:.4rem;
+}
+.pub .ven {
+  color: var(--muted);
+  font-size: .85rem;
+}
 .pub a.doi{ word-break: break-all }
 
-/* Print mode: show all tabs at once */
 @media print{
   body{ background:#fff; color:#000 }
   .header, .tabs{ background:#fff; box-shadow:none; border-color:#ccc }
@@ -104,7 +148,6 @@ a:hover{ text-decoration:underline }
 </head>
 <body>
 <div class="container">
-<!-- Header -->
 <header class="header" role="banner">
 <p class="subtitle">Research, Data &amp; Sustainability Analyst</p>
 <h1 class="title">Darliane Ribeiro Cunha</h1>
@@ -123,32 +166,29 @@ a:hover{ text-decoration:underline }
         </a>
 <a class="chip" href="https://orcid.org/0000-0003-2548-1237" rel="noopener" target="_blank" title="ORCID">
 <svg aria-hidden="true" fill="currentColor" viewbox="0 0 24 24"><path d="M3 4a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4Zm4 2v12h2V6H7Zm5 0v2h3a3 3 0 0 1 0 6h-3v4h-2V6h5a5 5 0 1 1 0 10h-3v-2h3a3 3 0 0 0 0-6h-3Z"></path></svg>
-          ORCID: 0000‑0003‑2548‑1237
+          ORCID: 0000-0003-2548-1237
         </a>
 <a class="chip" href="https://www.linkedin.com/in/darlianecunha/" rel="noopener" target="_blank" title="LinkedIn">
-<!-- linkedin icon -->
 <svg aria-hidden="true" fill="currentColor" viewbox="0 0 24 24">
 <path d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0ZM.5 8h4.9v13.5H.5V8Zm7.5 0h4.7v1.9h.1c.7-1.3 2.5-2.6 5.1-2.6 5.5 0 6.5 3.6 6.5 8.2v6.9h-4.9v-6.1c0-1.5 0-3.4-2.1-3.4-2.1 0-2.4 1.6-2.4 3.3v6.2H8V8Z"></path>
 </svg>
           LinkedIn
         </a>
 <a class="chip" href="https://scholar.google.com/citations?user=EDIT_ME" rel="noopener" target="_blank" title="Google Scholar">
-<!-- scholar cap icon -->
 <svg aria-hidden="true" fill="currentColor" viewbox="0 0 24 24">
 <path d="M12 3 1 9l11 6 9-4.91V17h2V9L12 3Zm-6 9.87V16l6 3 6-3v-3.13L12 16l-6-3.13Z"></path>
 </svg>
           Google Scholar
         </a>
 <a class="chip" href="https://github.com/darlianecunha" rel="noopener" target="_blank" title="GitHub">
-<!-- github icon -->
-<svg aria-hidden="true" fill="currentColor" viewbox="0 0 24 24">
-<path d="M12 .5a12 12 0 0 0-3.79 23.4c.6.1.82-.26.82-.58v-2.2c-3.34.72-4.04-1.6-4.04-1.6-.55-1.4-1.35-1.77-1.35-1.77-1.1-.75.08-.73.08-.73 1.21.09 1.84 1.24 1.84 1.24 1.08 1.85 2.83 1.31 3.52 1 .11-.8.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.37 1.24-3.21-.12-.3-.54-1.52.12-3.16 0 0 1.01-.32 3.3 1.23a11.4 11.4 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.64.24 2.86.12 3.16.77.84 1.24 1.9 1.24 3.21 0 4.61-2.8 5.63-5.48 5.93.43.37.81 1.1.81 2.22v3.29c0 .32.21.69.82.58A12 12 0 0 0 12 .5Z"></path>
+<svg aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
+<path d="M12 .5a12 12 0 0 0-3.79 23.4c.6.1.82-.26.82-.58v-2.2c-3.34.72-4.04-1.6-4.04-1.6-.55-1.4-1.35-1.77-1.35-1.77-1.1-.75.08-.73.08-.73 1.21.09 1.84 1.24 1.84 1.24 1.08 1.85 2.83 1.31 3.52 1 .11-.8.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.37 1.24-3.21-.12-.3-.54-1.52.12-3.16 0 0 1.01-.32 3.3 1.23a11.4 11.4 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.64.24 2.86.12 3.16.77.84 1.24 1.9 1.24 3.21 0 4.61-2.8 5.63-5.48 5.93.43.37.81 1.1.81 2.22v3.29c0 .32.21.69.82.58A12 12 0 0 0 12 .5Z"/>
 </svg>
           GitHub
         </a>
 </div>
 </header>
-<!-- Tabs -->
+
 <section aria-label="Primary" class="tabs">
 <ul class="tablist" role="tablist">
 <li><a aria-controls="panel-summary" href="#summary" id="tab-summary" role="tab">Summary</a></li>
@@ -159,136 +199,257 @@ a:hover{ text-decoration:underline }
 <li><a aria-controls="panel-review" href="#review" id="tab-review" role="tab">Collaborations &amp; Review</a></li>
 <li><a aria-controls="panel-tools" href="#tools" id="tab-tools" role="tab">Tools</a></li>
 </ul>
-<!-- Panels -->
+
 <div aria-labelledby="tab-summary" class="panel active" id="panel-summary" role="tabpanel">
-<div class="block">
-<h3>Professional Summary</h3>
-<p>Postdoctoral Researcher at Erasmus University Rotterdam (2024–2025), with previous experience at the Autonomous University of Barcelona (2017–2018).
-            Holds a PhD in Accounting and Finance (University of Zaragoza, 2016) and an MSc in Accounting (University of São Paulo, 2002).
-            Over 20 years of academic experience integrating teaching, research, and programme coordination. Since 2018, has consolidated a strong trajectory in sustainability research,
-            leading five funded projects and publishing in top‑tier journals. Expertise includes Sustainable Development Goals (SDGs), renewable energy,
-            port decarbonisation, environmental disclosure, and sustainable cities.</p>
-</div>
-</div>
-<div aria-labelledby="tab-positions" class="panel" id="panel-positions" role="tabpanel">
-<div class="grid grid-2">
-<div class="block">
-<h3>Federal University of Maranhão (Brazil) — Full‑time Professor</h3>
-<div class="meta">2010–present</div>
-<p>Coordinator of postgraduate programmes (2011–2019) and researcher at the Port Observatory.
-            Led research on port sustainability, decarbonisation, and environmental disclosure using Python‑based data analysis.</p>
-<div class="badges"><span class="badge">Teaching</span><span class="badge">Research Leadership</span><span class="badge">Port Observatory</span></div>
-</div>
-<div class="block">
-<h3>Green Port Complex: SDG‑Linked Indicators — Principal Investigator, FAPEMA</h3>
-<div class="meta">2022–2025</div>
-<p>Developed a sustainability index for the Itaqui Port Complex aligned with the SDGs; led model design, team management, and dissemination.
-              Resulted in a public digital prototype.</p>
-<div class="badges"><span class="badge">SDGs</span><span class="badge">Indicators</span><span class="badge">Itaqui</span></div>
-</div>
-<div class="block">
-<h3>On‑Shore Autonomous Energy Hub (OPS) for Ships in Itaqui‑MA — Principal Investigator, FAPEMA</h3>
-<div class="meta">2023–2025</div>
-<p>Developed a modular on‑shore power supply (OPS) concept to reduce port emissions; conducted field research and benchmarking in European ports.</p>
-<div class="badges"><span class="badge">OPS</span><span class="badge">Energy</span><span class="badge">Decarbonisation</span></div>
-</div>
-<div class="block">
-<h3>Conceptual Project — International Passenger Terminal, Port of Belém (COP‑30) — Researcher</h3>
-<div class="meta">2024–present</div>
-<p>Supports sustainability strategies and training for port managers in preparation for COP‑30; funded by the local government of Pará.</p>
-<div class="badges"><span class="badge">COP‑30</span><span class="badge">Training</span><span class="badge">Sustainability</span></div>
-</div>
-<div class="block">
-<h3>Omdena AI for the Ganges River (India) — International Volunteer Researcher</h3>
-<div class="meta">2024–2025</div>
-<p>Applied AI and computer vision for detecting plastic debris in rivers; contributed to literature review and model conceptualisation.</p>
-<div class="badges"><span class="badge">AI</span><span class="badge">Computer Vision</span><span class="badge">Environmental Monitoring</span></div>
-</div>
-</div>
-</div>
-<div aria-labelledby="tab-education" class="panel" id="panel-education" role="tabpanel">
-<div class="grid grid-2">
-<div class="block"><h3>PhD in Accounting and Finance</h3><div class="meta">University of Zaragoza, Spain — 2016</div></div>
-<div class="block"><h3>MSc in Accounting</h3><div class="meta">University of São Paulo, Brazil — 2002</div></div>
-<div class="block"><h3>Specialisation in Business and Project Management</h3><div class="meta">PUC Minas — 1999</div></div>
-<div class="block"><h3>BSc in Business Administration (Accounting)</h3><div class="meta">University of Potiguar, Brazil — 1997</div></div>
-</div>
-</div>
-<div aria-labelledby="tab-publications" class="panel" id="panel-publications" role="tabpanel">
-<div class="grid">
-<div class="pub">
-<div><strong>Cunha, D.R.</strong>, Costa, M.D.C., Oliveira, C.B.M., &amp; Pereira, N.N. (2025).
-              SDG Attributes: A Sustainability Assessment Framework for Brazilian Ports. <em>Marine Policy</em> (Q1).
-              <a class="doi" href="https://doi.org/10.1016/j.marpol.2025.106841" rel="noopener" target="_blank">https://doi.org/10.1016/j.marpol.2025.106841</a></div>
-<div class="ven">Indexed: Scopus</div>
-</div>
-<div class="pub">
-<div>Diniz, N.V., <strong>Cunha, D.R.</strong>, Porte, M.S., Oliveira, C.B.M., &amp; Fernandes, F.F. (2024).
-              A Bibliometric Analysis of SDGs in the Maritime Industry and Port Sector. <em>Regional Studies in Marine Science</em> (Q2).
-              <a class="doi" href="https://doi.org/10.1016/j.rsma.2023.103319" rel="noopener" target="_blank">https://doi.org/10.1016/j.rsma.2023.103319</a></div>
-<div class="ven">Indexed: Scopus</div>
-</div>
-<div class="pub">
-<div><strong>Cunha, D.R.</strong>, Pereira, N.N., Porte, M.S., &amp; Campos, C.R. (2023).
-              Sustainability Practices Aimed at the SDGs: A Study in Brazilian Ports. <em>Environment, Development and Sustainability</em> (Q1).
-              <a class="doi" href="https://doi.org/10.1007/s10668-023-03126-y" rel="noopener" target="_blank">https://doi.org/10.1007/s10668-023-03126-y</a></div>
-<div class="ven">Indexed: Scopus</div>
-</div>
-<div class="pub">
-<div>Sousa, Q., Oliveira, C.B.M., &amp; <strong>Cunha, D.R.</strong> (2023).
-              Photovoltaic Electronic Waste in Brazil: Circular Economy Challenges. <em>Social Sciences &amp; Humanities Open</em>.
-              <a class="doi" href="https://doi.org/10.1016/j.ssaho.2023.100456" rel="noopener" target="_blank">https://doi.org/10.1016/j.ssaho.2023.100456</a></div>
-<div class="ven">Indexed: Scopus</div>
-</div>
-</div>
+  <div class="block">
+    <h3>Professional Summary</h3>
+    <div class="meta">
+      <span class="highlight">Main Skills:</span>
+      <span class="skills">Sustainability · Port Decarbonisation · SDG Strategy · Data-Driven Analysis · Research Leadership</span>
+    </div>
+    <p>Postdoctoral Researcher at Erasmus University Rotterdam (2024–2025), with previous experience at the Autonomous University of Barcelona (2017–2018). Holds a PhD in Accounting and Finance (University of Zaragoza, 2016) and an MSc in Accounting (University of São Paulo, 2002).</p>
+    <p>Over 20 years of academic experience integrating teaching, research, and programme coordination. Since 2018, has led five funded projects in sustainability and port decarbonisation, producing high-impact publications and digital tools for decision support in ports and public management.</p>
+  </div>
 </div>
 
-<!-- Combined Skills + Languages -->
+<div aria-labelledby="tab-positions" class="panel" id="panel-positions" role="tabpanel">
+  <div class="grid grid-2">
+
+    <div class="block">
+      <h3>Federal University of Maranhão (Brazil) – Full-time Professor</h3>
+      <div class="meta">2010–present</div>
+      <p><span class="highlight">Main Skills:</span> <span class="skills">Sustainability • Port Management • Decarbonisation • Data Analysis • Higher Education Leadership</span></p>
+      <p>Led research and teaching initiatives at a leading public university in Brazil, integrating academic excellence with practical impact in sustainability and innovation. As <strong>Principal Investigator</strong> of five funded research projects, advanced sustainability, decarbonisation, and SDG implementation — resulting in peer-reviewed publications and operational frameworks proposed for Brazilian ports. Coordinated postgraduate programmes (2011–2019), mentoring over 100 graduate students and fostering applied research on environmental and financial performance. Published 15+ peer-reviewed articles in top journals such as <em>Marine Policy</em> (Q1), <em>Environment, Development &amp; Sustainability</em> (Q1), and <em>Regional Studies in Marine Science</em> (Q2). Actively contributes as a researcher at the <strong>Port Observatory</strong>, developing analytical tools and data-driven insights for decision-making in the Brazilian port sector.</p>
+    </div>
+
+    <div class="block">
+      <h3>SDG Research Hub Leader</h3>
+      <div class="meta">2017–present</div>
+      <p><span class="highlight">Main Skills:</span> <span class="skills">AI for Sustainability • Data Science • Digital Platforms • Research Innovation • Project Coordination</span></p>
+      <p>Leader in developing AI-based applications that bridge research and real-world sustainability solutions in the port sector. Designed and deployed digital tools translating academic findings into operational impacts, including:</p>
+      <ul class="styled-list">
+        <li><strong>Text Mining Assistant</strong> – NLP tool automating sustainability report analysis and exporting results to Word/Excel.</li>
+        <li><strong>BluePort</strong> – Computer vision system for waste detection in port areas using deep learning (YOLO, CNN) with <strong>85% classification accuracy</strong>.</li>
+        <li><strong>Global Maritime Trade Dashboard</strong> – Interactive platform visualising cargo flows across <strong>50+ countries</strong> (Python, Pandas, Plotly).</li>
+        <li><strong>Port Operations Dashboard</strong> – Real-time visualisation of cargo movements in Brazilian ports, identifying logistics trends and bottlenecks.</li>
+        <li><strong>SDG Ports Platform</strong> – Database consolidating sustainability initiatives across the maritime industry, promoting knowledge sharing and benchmarking.</li>
+      </ul>
+    </div>
+
+    <div class="block">
+      <h3>Green Port Complex: Proposed Indicators Linked to the SDGs – Principal Investigator</h3>
+      <div class="meta">2022–2025</div>
+      <p><span class="highlight">Main Skills:</span> <span class="skills">Sustainability Metrics • Indicator Design • Policy Alignment • Team Leadership • Digital Tools</span></p>
+      <p>Developed a <strong>Sustainability Index</strong> for the Itaqui Port Complex, aligned with the UN SDGs. Led model design, data analysis, and academic dissemination, culminating in a digital platform integrating research outputs into decision-support tools. <strong>Funding:</strong> FAPEMA / EMAP-Itaqui.</p>
+    </div>
+
+    <div class="block">
+      <h3>On-Shore Autonomous Energy Hub for Ships in Itaqui-MA – Principal Investigator</h3>
+      <div class="meta">2023–2025</div>
+      <p><span class="highlight">Main Skills:</span> <span class="skills">Energy Transition • Onshore Power Supply (OPS) • International Benchmarking • Emission Reduction</span></p>
+      <p>Developed a modular <strong>Onshore Power Supply (OPS)</strong> system to reduce port emissions and enhance operational efficiency. Conducted international benchmarking in European ports (Rotterdam, Antwerp, Hamburg), analysing shore power infrastructure, decarbonisation technologies, environmental management best practices, and regulatory frameworks. <strong>Funding:</strong> FAPEMA / EMAP-Itaqui.</p>
+    </div>
+
+    <div class="block">
+      <h3>Conceptual Project – International Passenger Terminal, Port of Belém (COP-30) – Researcher</h3>
+      <div class="meta">2024–present</div>
+      <p><span class="highlight">Main Skills:</span> <span class="skills">Sustainable Port Planning • Capacity Building • Strategic Partnerships • Environmental Management</span></p>
+      <p>Supports sustainability strategies and capacity-building for port managers in preparation for <strong>COP-30</strong>. Contributes to environmental planning and stakeholder engagement. <strong>Funding:</strong> Government of Pará.</p>
+    </div>
+
+    <div class="block">
+      <h3>Omdena AI for the Ganges River (India) – International Volunteer Researcher</h3>
+      <div class="meta">2024–2025</div>
+      <p><span class="highlight">Main Skills:</span> <span class="skills">Environmental AI • Computer Vision • Global Collaboration • Plastic Pollution Detection</span></p>
+      <p>Applied AI and computer vision techniques to detect plastic debris in river systems. Contributed to literature review, dataset design, and model conceptualisation, supporting scalable environmental monitoring solutions.</p>
+    </div>
+
+  </div>
+</div>
+
+<div aria-labelledby="tab-education" class="panel" id="panel-education" role="tabpanel">
+  <div class="grid grid-2">
+
+    <div class="block">
+      <h3>PhD in Accounting and Finance</h3>
+      <div class="meta">University of Zaragoza, Spain — 2016</div>
+      <p><span class="highlight">Focus:</span> <span class="skills">Environmental Disclosure · Corporate Sustainability · Energy Sector Accountability</span></p>
+    </div>
+
+    <div class="block">
+      <h3>MSc in Accounting</h3>
+      <div class="meta">University of São Paulo, Brazil — 2002</div>
+      <p><span class="highlight">Focus:</span> <span class="skills">Financial Reporting · Performance Evaluation · Management Control</span></p>
+    </div>
+
+    <div class="block">
+      <h3>Specialisation in Business and Project Management</h3>
+      <div class="meta">PUC Minas — 1999</div>
+      <p><span class="highlight">Focus:</span> <span class="skills">Project Coordination · Strategic Management · Public Sector Management</span></p>
+    </div>
+
+    <div class="block">
+      <h3>BSc in Business Administration (Accounting)</h3>
+      <div class="meta">University of Potiguar, Brazil — 1997</div>
+      <p><span class="highlight">Focus:</span> <span class="skills">Administration · Accounting · Decision Support</span></p>
+    </div>
+
+  </div>
+</div>
+
+<div aria-labelledby="tab-publications" class="panel" id="panel-publications" role="tabpanel">
+  <div class="grid">
+
+    <div class="pub block">
+      <div><strong>Cunha, D.R.</strong>, Costa, M.D.C., Oliveira, C.B.M., &amp; Pereira, N.N. (2025).
+        <em>SDG Attributes: A Sustainability Assessment Framework for Brazilian Ports.</em> <strong>Marine Policy</strong> (Q1).
+        <a class="doi" href="https://doi.org/10.1016/j.marpol.2025.106841" rel="noopener" target="_blank">https://doi.org/10.1016/j.marpol.2025.106841</a>
+      </div>
+      <div class="ven">Scope: SDG indicators · Port governance · Decision support</div>
+    </div>
+
+    <div class="pub block">
+      <div>Diniz, N.V., <strong>Cunha, D.R.</strong>, Porte, M.S., Oliveira, C.B.M., &amp; Fernandes, F.F. (2024).
+        <em>A Bibliometric Analysis of SDGs in the Maritime Industry and Port Sector.</em> <strong>Regional Studies in Marine Science</strong> (Q2).
+        <a class="doi" href="https://doi.org/10.1016/j.rsma.2023.103319" rel="noopener" target="_blank">https://doi.org/10.1016/j.rsma.2023.103319</a>
+      </div>
+      <div class="ven">Scope: Global research mapping · Maritime sustainability · Collaboration networks</div>
+    </div>
+
+    <div class="pub block">
+      <div><strong>Cunha, D.R.</strong>, Pereira, N.N., Porte, M.S., &amp; Campos, C.R. (2023).
+        <em>Sustainability Practices Aimed at the SDGs: A Study in Brazilian Ports.</em> <strong>Environment, Development and Sustainability</strong> (Q1).
+        <a class="doi" href="https://doi.org/10.1007/s10668-023-03126-y" rel="noopener" target="_blank">https://doi.org/10.1007/s10668-023-03126-y</a>
+      </div>
+      <div class="ven">Scope: Decarbonisation strategies · Operational practices · Brazilian context</div>
+    </div>
+
+    <div class="pub block">
+      <div>Sousa, Q., Oliveira, C.B.M., &amp; <strong>Cunha, D.R.</strong> (2023).
+        <em>Photovoltaic Electronic Waste in Brazil: Circular Economy Challenges.</em> <strong>Social Sciences &amp; Humanities Open</strong>.
+        <a class="doi" href="https://doi.org/10.1016/j.ssaho.2023.100456" rel="noopener" target="_blank">https://doi.org/10.1016/j.ssaho.2023.100456</a>
+      </div>
+      <div class="ven">Scope: Circular economy · Solar energy · Waste policy</div>
+    </div>
+
+  </div>
+</div>
+
 <div aria-labelledby="tab-skills" class="panel" id="panel-skills" role="tabpanel">
   <div class="grid grid-3">
-    <div class="block"><h3>Data &amp; Analytics</h3><p>Python · Pandas · Matplotlib · Plotly · NLP · Text Mining · SPSS · VOSviewer</p></div>
-    <div class="block"><h3>Apps &amp; Dashboards</h3><p>Streamlit · Dashboard Development · Interactive Visualisation</p></div>
-    <div class="block"><h3>Domains &amp; Methods</h3><p>Sustainability &amp; SDG Indicators · Port Decarbonisation · Academic Writing · Research Leadership</p></div>
+
+    <div class="block">
+      <h3>Data &amp; Analytics</h3>
+      <p>
+        <span class="highlight">Main Skills:</span>
+        <span class="skills">Python · Pandas · Matplotlib · Plotly · NLP · Text Mining · SPSS · VOSviewer</span>
+      </p>
+    </div>
+
+    <div class="block">
+      <h3>Apps &amp; Dashboards</h3>
+      <p>
+        <span class="highlight">Main Skills:</span>
+        <span class="skills">Streamlit · Dashboard Development · Interactive Visualisation · Decision Support Tools</span>
+      </p>
+    </div>
+
+    <div class="block">
+      <h3>Domains &amp; Methods</h3>
+      <p>
+        <span class="highlight">Main Skills:</span>
+        <span class="skills">Sustainability &amp; SDG Indicators · Port Decarbonisation · Academic Writing · Research Leadership</span>
+      </p>
+    </div>
+
   </div>
 
-  <!-- Languages moved here (bottom of Skills) -->
   <div class="block" style="margin-top:16px">
     <h3>Languages</h3>
     <div class="grid grid-3">
-      <div class="block"><h3>Portuguese</h3><div class="meta">Native</div></div>
-      <div class="block"><h3>English</h3><div class="meta">C1</div></div>
-      <div class="block"><h3>Spanish</h3><div class="meta">C1</div></div>
+
+      <div class="block">
+        <h3>Portuguese</h3>
+        <div class="meta">Native</div>
+      </div>
+
+      <div class="block">
+        <h3>English</h3>
+        <div class="meta">C1</div>
+      </div>
+
+      <div class="block">
+        <h3>Spanish</h3>
+        <div class="meta">C1</div>
+      </div>
+
     </div>
   </div>
 </div>
 
-<div aria-labelledby="tab-review" class="panel" id="panel-review" role="tabpanel"><div class="block">
-<h3>Peer Review &amp; Editorial Service</h3>
-<p>Reviewer for international journals indexed in Web of Science and Scopus, including:
-            <em>Journal of Cleaner Production</em>, <em>Advanced Sustainable Systems</em>, <em>Business Strategy and the Environment</em>,
-            <em>Energy, Ecology and Environment</em>, <em>Journal of Public Affairs</em>, and <em>Sustainable Development</em>.</p>
-</div><hr style="border:0; border-top:2px solid #cccccc; margin:24px 0;"/><h3>Collaborations</h3><div class="grid grid-2"><div class="block"><h3><a href="http://www.sdghub.com.br" rel="noopener" target="_blank">🌐 SDG Hub</a></h3></div><div class="block"><h3><a href="https://www.labportos.log.br/institucional.html" rel="noopener" target="_blank">🌐 LabPortos</a></h3></div><div class="block"><h3><a href="https://observatorioportuario.com.br/sobre/" rel="noopener" target="_blank">🌐 Observatório Portuário</a></h3></div><div class="block"><h3><a href="https://cess.uff.br/pessoas/" rel="noopener" target="_blank">🌐 CESS</a></h3></div></div></div>
+<div aria-labelledby="tab-review" class="panel" id="panel-review" role="tabpanel">
 
-<!-- New Tools tab panel -->
+  <div class="block">
+    <h3>Peer Review &amp; Editorial Service</h3>
+    <div class="meta">
+      <span class="highlight">Main Skills:</span>
+      <span class="skills">Critical Evaluation · Scientific Writing Standards · Sustainability &amp; Environmental Governance</span>
+    </div>
+    <p>Reviewer for international journals indexed in Web of Science and Scopus, including
+      <em>Journal of Cleaner Production</em>, <em>Advanced Sustainable Systems</em>,
+      <em>Business Strategy and the Environment</em>, <em>Energy, Ecology and Environment</em>,
+      <em>Journal of Public Affairs</em>, and <em>Sustainable Development</em>.
+    </p>
+  </div>
+
+  <hr style="border:0; border-top:2px solid #223058; margin:24px 0;"/>
+
+  <div class="grid grid-2">
+
+    <div class="block">
+      <h3><a href="http://www.sdghub.com.br" rel="noopener" target="_blank">🌐 SDG Hub</a></h3>
+      <div class="meta skills">Collaborative platform for SDG-driven sustainability projects</div>
+    </div>
+
+    <div class="block">
+      <h3><a href="https://www.labportos.log.br/institucional.html" rel="noopener" target="_blank">🌐 LabPortos</a></h3>
+      <div class="meta skills">Innovation and technical studies on port operations</div>
+    </div>
+
+    <div class="block">
+      <h3><a href="https://observatorioportuario.com.br/sobre/" rel="noopener" target="_blank">🌐 Observatório Portuário</a></h3>
+      <div class="meta skills">Monitoring port indicators and informing decision-makers</div>
+    </div>
+
+    <div class="block">
+      <h3><a href="https://cess.uff.br/pessoas/" rel="noopener" target="_blank">🌐 CESS</a></h3>
+      <div class="meta skills">Sustainability, energy transition and territorial development</div>
+    </div>
+
+  </div>
+</div>
+
 <div aria-labelledby="tab-tools" class="panel" id="panel-tools" role="tabpanel">
   <div class="block">
     <h3>Main Tools Developed</h3>
+    <div class="meta">
+      <span class="highlight">Focus:</span>
+      <span class="skills">Decision support · Sustainability intelligence · Operational efficiency in ports</span>
+    </div>
     <p><a href="https://darlianecunha.github.io/tools/" target="_blank" rel="noopener">https://darlianecunha.github.io/tools/</a></p>
   </div>
 </div>
 
 </section>
 </div>
+
 <script>
-// Simple SPA-like tabs with hash routing and ARIA states
 (function(){
   const tabs = Array.from(document.querySelectorAll('[role="tab"]'));
   const panels = Array.from(document.querySelectorAll('.panel'));
 
   function activate(id){
-    // Update panels
     panels.forEach(p => p.classList.toggle('active', '#' + p.id.replace('panel-', '') === id));
-    // Update tabs
     tabs.forEach(t => {
       const match = t.getAttribute('href') === id;
       t.setAttribute('aria-selected', match ? 'true' : 'false');
@@ -296,7 +457,6 @@ a:hover{ text-decoration:underline }
     });
   }
 
-  // Attach click handlers (no full reload)
   tabs.forEach(t => t.addEventListener('click', e => {
     e.preventDefault();
     const id = t.getAttribute('href');
@@ -304,10 +464,8 @@ a:hover{ text-decoration:underline }
     activate(id);
   }));
 
-  // Handle back/forward
   window.addEventListener('popstate', () => activate(location.hash || '#summary'));
 
-  // Initial load
   activate(location.hash || '#summary');
 })();
 </script>

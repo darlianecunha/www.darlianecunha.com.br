@@ -1,451 +1,96 @@
-<!DOCTYPE html>
-
+<!doctype html>
 <html lang="en-GB">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Darliane Ribeiro Cunha | AI &amp; Sustainability Portfolio</title>
-<meta content="Portfolio of AI tools, chatbots and dashboards for sustainability, ports and decarbonisation." name="description"/>
-<style>
-:root{
-  --bg:#0b1020;
-  --surface:#10172b;
-  --ink:#e8eefb;
-  --muted:#a8b8d7;
-  --line:#223058;
-  --accent:#6aa7ff;
-  --pill:#16203e;
-}
-*{ box-sizing:border-box }
-html,body{ height:100% }
-body{
-  margin:0;
-  background:radial-gradient(1300px 900px at 75% -20%, #1a2240 0%, #0b1020 55%) fixed,var(--bg);
-  color:var(--ink);
-  font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial,"Noto Sans",Ubuntu,Cantarell,"DejaVu Sans",sans-serif;
-  -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
-}
-a{ color:var(--accent); text-decoration:none }
-a:hover{ text-decoration:underline }
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Site moved</title>
 
-.container{ width:min(1100px,94vw); margin:22px auto 64px; }
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
-.header{
-  display:grid; gap:14px; padding:22px;
-  background:linear-gradient(180deg,#121a31 0%,#0f162b 100%);
-  border:1px solid var(--line); border-radius:18px;
-  box-shadow:0 10px 30px rgba(0,0,0,.35),0 0 0 10px rgba(12,18,36,.35) inset;
-  position:relative; overflow:hidden;
-}
-.header::after{ content:""; position:absolute; inset:-2px;
-  background:radial-gradient(450px 220px at 0% 0%, rgba(106,167,255,.35), transparent 60%); pointer-events:none;
-}
-.title{ margin:2px 0 0; font-weight:800; line-height:1.1; letter-spacing:.3px;
-  font-size:clamp(1.6rem,3vw,2.2rem);
-}
-.subtitle{ margin:0; color:var(--muted); font-size:clamp(1rem,1.6vw,1.05rem) }
+  <style>
+    :root{
+      --bg:#0f1724;
+      --accent:#7dd3fc;
+      --muted:#9aa4b2;
+      --maxw:760px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+      background: var(--bg);
+      color: #e6eef6;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:32px;
+    }
 
-.chips{ display:flex; flex-wrap:wrap; gap:.5rem; margin-top:.6rem }
-.chip{ display:inline-flex; align-items:center; gap:.5rem; padding:.4rem .65rem; border-radius:999px;
-  border:1px solid #2b3a66; background:var(--pill); color:var(--muted); font-size:.92rem; white-space:nowrap }
-.chip svg{ width:.95rem; height:.95rem; opacity:.85 }
+    .card{
+      width:100%;
+      max-width:var(--maxw);
+      background: rgba(255,255,255,0.03);
+      border-radius:16px;
+      padding:40px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+      text-align:center;
+    }
 
-/* Primary calls to action */
-.cta{ display:flex; flex-wrap:wrap; gap:.6rem; margin-top:.9rem; position:relative; z-index:2 }
-.btn{
-  display:inline-flex; align-items:center; justify-content:center;
-  padding:.55rem .95rem; border-radius:12px;
-  border:1px solid #2b3a66; background:#11182e; color:var(--ink);
-  font-weight:700; letter-spacing:.2px;
-}
-.btn:hover{ text-decoration:none; background:rgba(22,32,62,.65) }
-.btn.primary{
-  background:linear-gradient(180deg, rgba(106,167,255,.95) 0%, rgba(106,167,255,.75) 100%);
-  border-color:rgba(106,167,255,.65);
-  color:#0b1020;
-}
-.btn.primary:hover{ filter:brightness(1.05) }
-.small{ font-size:.92rem; color:var(--muted) }
+    h1{
+      margin:0 0 20px 0;
+      font-size:24px;
+      font-weight:600;
+    }
 
-.tool-card h3{ display:flex; align-items:center; gap:.5rem }
-.tool-links{ display:flex; flex-wrap:wrap; gap:.75rem; margin-top:.6rem }
-.tool-links a{ font-weight:700 }
+    p{
+      margin:0 0 24px 0;
+      color:var(--muted);
+      font-size:16px;
+      line-height:1.5;
+    }
 
+    .btn{
+      display:inline-block;
+      padding:14px 24px;
+      border-radius:10px;
+      text-decoration:none;
+      font-weight:600;
+      background: rgba(125,211,252,0.12);
+      color:var(--accent);
+      border:1px solid rgba(125,211,252,0.3);
+      transition: background 0.2s ease;
+    }
 
-.tabs{
-  margin-top:14px;
-  border:1px solid var(--line);
-  border-radius:16px;
-  overflow:hidden;
-  background:linear-gradient(180deg,#121a31 0%,#0f162b 100%);
-}
-.tablist{
-  display:flex; flex-wrap:wrap; gap:6px; padding:10px; margin:0;
-  list-style:none; border-bottom:1px solid var(--line);
-  background:rgba(11,16,32,.8); backdrop-filter: blur(6px);
-  position:sticky; top:0; z-index:5;
-}
-.tablist a{
-  display:inline-block; padding:.5rem .8rem; border-radius:10px;
-  border:1px solid #1e2a52; background:#11182e; color:var(--ink);
-}
-.tablist a[aria-selected="true"]{
-  border-color:#2a3a6c;
-  box-shadow:0 0 0 2px rgba(106,167,255,.2);
-}
-.panel{ display:none; padding:18px }
-.panel.active{ display:block; animation:fade .22s ease-out }
-@keyframes fade{ from{opacity:0; transform:translateY(6px)} to{opacity:1; transform:none} }
+    .btn:hover{
+      background: rgba(125,211,252,0.2);
+    }
 
-.grid{ display:grid; grid-template-columns:1fr; gap:12px }
-@media (min-width: 860px){ .grid-2{ grid-template-columns:1fr 1fr } .grid-3{ grid-template-columns:1fr 1fr 1fr } }
-
-.block {
-  box-shadow: 0 0 12px rgba(106,167,255,0.15);
-  padding: 16px;
-  border-radius: 12px;
-  border:1px solid #1e2a52;
-  background:#0f1529;
-  transition: background .3s ease;
-}
-.block:hover {
-  background-color: rgba(22,32,62,0.5);
-}
-
-.block h3{ margin:.1rem 0 .35rem; font-size:1.05rem }
-
-.meta{
-  color:var(--muted);
-  font-size:.9rem;
-  margin:.15rem 0 .75rem;
-  font-weight:500;
-}
-
-.badges{ display:flex; flex-wrap:wrap; gap:.4rem; margin-top:.5rem }
-.badge{
-  background:var(--pill);
-  border:1px solid #2b3a66;
-  color:var(--muted);
-  padding:.25rem .55rem;
-  border-radius:999px;
-  font-size:.85rem
-}
-
-.highlight {
-  color: var(--accent);
-  font-weight: 600;
-}
-.skills {
-  color: var(--muted);
-  font-style: italic;
-}
-
-.styled-list li {
-  margin-bottom: 6px;
-  line-height: 1.5;
-}
-
-.pub {
-  background:#0f1529;
-  border:1px solid #2b3a66;
-  box-shadow:0 0 12px rgba(106,167,255,.12);
-  border-radius:12px;
-  padding:.9rem 1rem;
-  display:grid;
-  gap:.4rem;
-}
-.pub .ven {
-  color: var(--muted);
-  font-size: .85rem;
-}
-.pub a.doi{ word-break: break-all }
-
-@media print{
-  body{ background:#fff; color:#000 }
-  .header, .tabs{ background:#fff; box-shadow:none; border-color:#ccc }
-  .tablist{ display:none }
-  .panel{ display:block !important }
-  a{ color:#004aad; text-decoration:underline }
-}
-</style>
+    .small{
+      font-size:13px;
+      margin-top:28px;
+      color:#7f8b96;
+    }
+  </style>
 </head>
 <body>
-<div class="container">
-<header class="header" role="banner">
-<p class="subtitle">Data Scientist | Applied AI for Sustainability</p>
-<h1 class="title">Darliane Ribeiro Cunha</h1>
-<div aria-label="Contact and Links" class="chips">
-<a class="chip" href="mailto:darlianerc@gmail.com" title="Email">
-<svg aria-hidden="true" fill="currentColor" viewbox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v1.2l10 5.6 10-5.6V6a2 2 0 0 0 2-2Zm0 6.2-8 4.5-8-4.5V18a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V10.2Z"></path></svg>
-          darlianerc@gmail.com
-        </a>
-<a class="chip" href="https://www.darlianecunha.com.br" rel="noopener" target="_blank" title="Website">
-<svg aria-hidden="true" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2Zm7.93 9h-3.07a15.7 15.7 0 0 0-1.2-5.18A8.03 8.03 0 0 1 19.93 11ZM12 4c.9 0 2.5 2.3 3.2 6H8.8C9.5 6.3 11.1 4 12 4ZM4.07 11h3.07c.19-1.96.71-3.78 1.5-5.18A8.03 8.03 0 0 0 4.07 11ZM8.64 13h6.72c-.7 3.7-2.3 6-3.36 6s-2.66-2.3-3.36-6Zm6.57 5.18A15.7 15.7 0 0 0 16.86 13h3.07a8.03 8.03 0 0 1-3.72 5.18ZM7.14 13a15.7 15.7 0 0 0 1.65 5.18A8.03 8.03 0 0 1 4.07 13h3.07Z"></path></svg>
-          www.darlianecunha.com.br
-        </a>
-<a class="chip" href="https://orcid.org/0000-0003-2548-1237" rel="noopener" target="_blank" title="ORCID">
-<svg aria-hidden="true" fill="currentColor" viewbox="0 0 24 24"><path d="M3 4a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4Zm4 2v12h2V6H7Zm5 0v2h3a3 3 0 0 1 0 6h-3v4h-2V6h5a5 5 0 1 1 0 10h-3v-2h3a3 3 0 0 0 0-6h-3Z"></path></svg>
-          ORCID: 0000-0003-2548-1237
-        </a>
-<a class="chip" href="https://www.linkedin.com/in/darlianecunha/" rel="noopener" target="_blank" title="LinkedIn">
-<svg aria-hidden="true" fill="currentColor" viewbox="0 0 24 24">
-<path d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0ZM.5 8h4.9v13.5H.5V8Zm7.5 0h4.7v1.9h.1c.7-1.3 2.5-2.6 5.1-2.6 5.5 0 6.5 3.6 6.5 8.2v6.9h-4.9v-6.1c0-1.5 0-3.4-2.1-3.4-2.1 0-2.4 1.6-2.4 3.3v6.2H8V8Z"></path>
-</svg>
-          LinkedIn
-        </a>
-<a class="chip" href="https://scholar.google.com/citations?user=EDIT_ME" rel="noopener" target="_blank" title="Google Scholar">
-<svg aria-hidden="true" fill="currentColor" viewbox="0 0 24 24">
-<path d="M12 3 1 9l11 6 9-4.91V17h2V9L12 3Zm-6 9.87V16l6 3 6-3v-3.13L12 16l-6-3.13Z"></path>
-</svg>
-          Google Scholar
-        </a>
-<a class="chip" href="https://github.com/darlianecunha" rel="noopener" target="_blank" title="GitHub">
-<svg aria-hidden="true" fill="currentColor" viewbox="0 0 24 24">
-<path d="M12 .5a12 12 0 0 0-3.79 23.4c.6.1.82-.26.82-.58v-2.2c-3.34.72-4.04-1.6-4.04-1.6-.55-1.4-1.35-1.77-1.35-1.77-1.1-.75.08-.73.08-.73 1.21.09 1.84 1.24 1.84 1.24 1.08 1.85 2.83 1.31 3.52 1 .11-.8.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.37 1.24-3.21-.12-.3-.54-1.52.12-3.16 0 0 1.01-.32 3.3 1.23a11.4 11.4 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.64.24 2.86.12 3.16.77.84 1.24 1.9 1.24 3.21 0 4.61-2.8 5.63-5.48 5.93.43.37.81 1.1.81 2.22v3.29c0 .32.21.69.82.58A12 12 0 0 0 12 .5Z"></path>
-</svg>
-          GitHub
-        </a>
-</div>
-</header>
-<section aria-label="Primary" class="tabs">
-<ul class="tablist" role="tablist">
-<li><a aria-controls="panel-summary" href="#summary" id="tab-summary" role="tab">About</a></li>
-<li><a aria-controls="panel-tools" href="#tools" id="tab-tools" role="tab">Portfolio &amp; Demos</a></li>
-<li><a aria-controls="panel-skills" href="#skills" id="tab-skills" role="tab">Skills</a></li>
-<li><a aria-controls="panel-publications" href="#publications" id="tab-publications" role="tab">Publications</a></li>
-<li><a aria-controls="panel-review" href="#review" id="tab-review" role="tab">Connections</a></li>
-</ul>
-<div aria-labelledby="tab-summary" class="panel active" id="panel-summary" role="tabpanel"><p>Led high impact research at a Brazilian public university, bridging academic rigour with real world delivery in sustainability and innovation. As Principal Investigator and project manager on five funded projects, led end to end delivery from proposal design and stakeholder coordination to execution, reporting and dissemination. Advanced port decarbonisation and SDG implementation, translating evidence into peer reviewed outputs and practical frameworks proposed for adoption across Brazilian ports. Served as postgraduate programme coordinator (2011 to 2019), mentoring 100+ graduate students and building a strong pipeline of applied research on environmental and financial performance.</p><p>Author of 15+ peer reviewed articles, with publications in leading outlets including Marine Policy (Q1), Environment, Development &amp; Sustainability (Q1) and Regional Studies in Marine Science (Q2). Active researcher at the Port Observatory, developing analytical tools and data driven insights that support decision makers in the Brazilian port sector.</p><p>Postdoctoral Researcher at Erasmus University Rotterdam (2024 to 2025), with prior postdoctoral experience at the Autonomous University of Barcelona (2017 to 2018). PhD in Accounting and Finance (University of Zaragoza, 2016) and MSc in Accounting (University of São Paulo, 2002).</p>
+  <main class="card">
 
-</div>
-<div aria-labelledby="tab-tools" class="panel" id="panel-tools" role="tabpanel">
-<div class="grid grid-2" style="margin-top:12px">
-<div class="block tool-card">
-<h3>🟦 BluePort</h3>
-<div class="meta">AI assistant in Portuguese for waste identification and classification in port areas.</div>
-<div class="badges">
-<span class="badge">Computer vision</span><span class="badge">Sustainability</span><span class="badge">Operational workflow</span>
-</div>
-<div class="tool-links">
-<a href="https://darlianecunha.github.io/blueport-ia/" rel="noopener" target="_blank">Project page</a>
-</div>
-</div>
-<div class="block tool-card">
-<h3>📄 Text Mining Assistant</h3>
-<div class="meta">Analyse PDFs, highlight keywords and export evidence to Word and Excel.</div>
-<div class="badges">
-<span class="badge">NLP</span><span class="badge">PDF analysis</span><span class="badge">Streamlit</span>
-</div>
-<div class="tool-links">
-<a href="https://textmininginput.streamlit.app" rel="noopener" target="_blank">Open app</a>
-</div>
-</div>
-<div class="block tool-card">
-<h3>📊 SDG Attributes</h3>
-<div class="meta">Manage and monitor SDG linked data for port projects and sustainability indicators.</div>
-<div class="badges">
-<span class="badge">Indicators</span><span class="badge">SDGs</span><span class="badge">Data management</span>
-</div>
-<div class="tool-links">
-<a href="https://darlianecunha.github.io/atributosods/" rel="noopener" target="_blank">Open app</a>
-</div>
-</div>
-<div class="block tool-card">
-<h3>🌍 Global Maritime Trade Dashboard</h3>
-<div class="meta">Interactive dashboard for cargo flows, by country and product type.</div>
-<div class="badges">
-<span class="badge">Dashboard</span><span class="badge">Plotly</span><span class="badge">Streamlit</span>
-</div>
-<div class="tool-links">
-<a href="https://globalmaritimetradedashboard.streamlit.app" rel="noopener" target="_blank">Open dashboard</a>
-</div>
-</div>
-<div class="block tool-card">
-<h3>⚓ Port Operations Dashboard</h3>
-<div class="meta">Visualise cargo movements in Brazilian ports to spot trends and bottlenecks.</div>
-<div class="badges">
-<span class="badge">Operations</span><span class="badge">Analytics</span><span class="badge">Streamlit</span>
-</div>
-<div class="tool-links">
-<a href="https://observatorio1.streamlit.app" rel="noopener" target="_blank">Open dashboard</a>
-</div>
-</div>
-<div class="block tool-card">
-<h3>📦 Port Exports</h3>
-<div class="meta">Maritime exports overview, with volumes by country and product.</div>
-<div class="badges">
-<span class="badge">Trade</span><span class="badge">Visualisation</span><span class="badge">Streamlit</span>
-</div>
-<div class="tool-links">
-<a href="https://portexports.streamlit.app" rel="noopener" target="_blank">Open dashboard</a>
-</div>
-</div>
-<div class="block tool-card">
-<h3>🏗️ Itaqui Dashboard</h3>
-<div class="meta">Data and sustainability initiatives for the Port of Itaqui.</div>
-<div class="badges">
-<span class="badge">Dashboard</span><span class="badge">Vercel</span><span class="badge">Port data</span>
-</div>
-<div class="tool-links">
-<a href="https://itaqui.vercel.app" rel="noopener" target="_blank">Open dashboard</a>
-</div>
-</div>
-<div class="block tool-card">
-<h3>🔊 Audio Generator</h3>
-<div class="meta">Turn text into audio files for outreach, accessibility and communication.</div>
-<div class="badges">
-<span class="badge">Text-to-audio</span><span class="badge">Accessibility</span><span class="badge">Streamlit</span>
-</div>
-<div class="tool-links">
-<a href="https://textforaudio.streamlit.app" rel="noopener" target="_blank">Open app</a>
-</div>
-</div>
-<div class="block tool-card">
-<h3>🧭 SDG Ports Platform</h3>
-<div class="meta">Database of sustainability and innovation initiatives in the port sector.</div>
-<div class="badges">
-<span class="badge">Knowledge base</span><span class="badge">Benchmarking</span><span class="badge">Vercel</span>
-</div>
-<div class="tool-links">
-<a href="https://app18-seven.vercel.app" rel="noopener" target="_blank">Open platform</a>
-</div>
-</div>
-<div class="block tool-card"><h3>🧪 Academic Manuscript Grader</h3><div class="meta">Custom GPT chatbot that grades academic manuscripts by assigning numerical scores and an overall grade, alongside structured peer review feedback to strengthen clarity, methods, argumentation, and publishability.</div><div class="badges"><span class="badge">Chatbot</span><span class="badge">Academic review</span><span class="badge">Scoring rubric</span></div><div class="tool-links"><a href="https://chatgpt.com/g/g-6978b8d927e4819194419d2983e71dfa-academic-manuscript-grader" rel="noopener" target="_blank">Open GPT</a></div></div><div class="block tool-card"><h3>🧳 Practical Travel Planner</h3><div class="meta">Custom GPT chatbot that produces practical, day by day travel itineraries from minimal inputs (destination, hotel, dates), including estimated distances, transport guidance, weather tips, and contingency options.</div><div class="badges"><span class="badge">Chatbot</span><span class="badge">Travel planning</span><span class="badge">Itinerary builder</span></div><div class="tool-links"><a href="https://chatgpt.com/g/g-6978b2e03518819190c641aa3120ccba-practical-travel-planner" rel="noopener" target="_blank">Open GPT</a></div></div><div class="block tool-card"><h3>🧩 Prompt Detailer</h3><div class="meta">Custom GPT chatbot that turns rough ideas into clear, detailed, copy and paste ready prompts for any AI model, using sensible defaults to minimise back and forth and deliver reliable structured outputs.</div><div class="badges"><span class="badge">Chatbot</span><span class="badge">Prompting</span><span class="badge">Workflow</span></div><div class="tool-links"><a href="https://chatgpt.com/g/g-6978ae210bbc81919460dd2670e80740-prompt-detailer" rel="noopener" target="_blank">Open GPT</a></div></div><div class="block tool-card"><h3>💡 Innovation Specialist</h3><div class="meta">Custom GPT chatbot that supports innovation projects by helping define problem statements, generate and prioritise ideas, map stakeholders, design pilots, and create practical roadmaps with clear deliverables and success metrics.</div><div class="badges"><span class="badge">Chatbot</span><span class="badge">Innovation</span><span class="badge">Roadmaps</span></div><div class="tool-links"><a href="https://chatgpt.com/g/g-6978c38eba788191bd01bfc6f6aba15a-innovation-specialist" rel="noopener" target="_blank">Open GPT</a></div></div></div>
-</div>
-<div aria-labelledby="tab-skills" class="panel" id="panel-skills" role="tabpanel">
-<div class="grid grid-3">
-<div class="block">
-<h3>Data &amp; Analytics</h3>
-<p>
-<span class="highlight">Main Skills:</span>
-<span class="skills">Python · Pandas · Matplotlib · Plotly · NLP · Text Mining · SPSS · VOSviewer</span>
-</p>
-</div>
-<div class="block">
-<h3>Apps &amp; Dashboards</h3>
-<p>
-<span class="highlight">Main Skills:</span>
-<span class="skills">Streamlit · Dashboard Development · Interactive Visualisation · Decision Support Tools</span>
-</p>
-</div>
-<div class="block">
-<h3>Domains &amp; Methods</h3>
-<p>
-<span class="highlight">Main Skills:</span>
-<span class="skills">Sustainability &amp; SDG Indicators · Port Decarbonisation · Academic Writing · Research Leadership</span>
-</p>
-</div>
-</div>
-<div class="block" style="margin-top:16px">
-<h3>Languages</h3>
-<div class="grid grid-3">
-<div class="block">
-<h3>Portuguese</h3>
-<div class="meta">Native</div>
-</div>
-<div class="block">
-<h3>English</h3>
-<div class="meta">C1</div>
-</div>
-<div class="block">
-<h3>Spanish</h3>
-<div class="meta">C1</div>
-</div>
-</div>
-</div>
-</div>
-<div aria-labelledby="tab-publications" class="panel" id="panel-publications" role="tabpanel">
-<div class="grid">
-<div class="pub block">
-<div><strong>Cunha, D.R.</strong>, Costa, M.D.C., Oliveira, C.B.M., &amp; Pereira, N.N. (2025).
-        <em>SDG Attributes: A Sustainability Assessment Framework for Brazilian Ports.</em> <strong>Marine Policy</strong> (Q1).
-        <a class="doi" href="https://doi.org/10.1016/j.marpol.2025.106841" rel="noopener" target="_blank">https://doi.org/10.1016/j.marpol.2025.106841</a>
-</div>
-<div class="ven">Scope: SDG indicators · Port governance · Decision support</div>
-</div>
-<div class="pub block">
-<div>Diniz, N.V., <strong>Cunha, D.R.</strong>, Porte, M.S., Oliveira, C.B.M., &amp; Fernandes, F.F. (2024).
-        <em>A Bibliometric Analysis of SDGs in the Maritime Industry and Port Sector.</em> <strong>Regional Studies in Marine Science</strong> (Q2).
-        <a class="doi" href="https://doi.org/10.1016/j.rsma.2023.103319" rel="noopener" target="_blank">https://doi.org/10.1016/j.rsma.2023.103319</a>
-</div>
-<div class="ven">Scope: Global research mapping · Maritime sustainability · Collaboration networks</div>
-</div>
-<div class="pub block">
-<div><strong>Cunha, D.R.</strong>, Pereira, N.N., Porte, M.S., &amp; Campos, C.R. (2023).
-        <em>Sustainability Practices Aimed at the SDGs: A Study in Brazilian Ports.</em> <strong>Environment, Development and Sustainability</strong> (Q1).
-        <a class="doi" href="https://doi.org/10.1007/s10668-023-03126-y" rel="noopener" target="_blank">https://doi.org/10.1007/s10668-023-03126-y</a>
-</div>
-<div class="ven">Scope: Decarbonisation strategies · Operational practices · Brazilian context</div>
-</div>
-<div class="pub block">
-<div>Sousa, Q., Oliveira, C.B.M., &amp; <strong>Cunha, D.R.</strong> (2023).
-        <em>Photovoltaic Electronic Waste in Brazil: Circular Economy Challenges.</em> <strong>Social Sciences &amp; Humanities Open</strong>.
-        <a class="doi" href="https://doi.org/10.1016/j.ssaho.2023.100456" rel="noopener" target="_blank">https://doi.org/10.1016/j.ssaho.2023.100456</a>
-</div>
-<div class="ven">Scope: Circular economy · Solar energy · Waste policy</div>
-</div>
-</div>
-</div>
-<div aria-labelledby="tab-review" class="panel" id="panel-review" role="tabpanel">
-<div class="block">
-<h3>Connections</h3>
-<div class="meta">
-<span class="highlight">Main Skills:</span>
-<span class="skills">Critical Evaluation · Scientific Writing Standards · Sustainability &amp; Environmental Governance</span>
-</div>
-<p>Reviewer for international journals indexed in Web of Science and Scopus, including
-      <em>Journal of Cleaner Production</em>, <em>Advanced Sustainable Systems</em>,
-      <em>Business Strategy and the Environment</em>, <em>Energy, Ecology and Environment</em>,
-      <em>Journal of Public Affairs</em>, and <em>Sustainable Development</em>.
+    <h1>Our website has moved</h1>
+
+    <p>
+      We now have a new online home. For the latest updates and full content, please visit:
     </p>
-</div>
-<hr style="border:0; border-top:2px solid #223058; margin:24px 0;"/>
-<div class="grid grid-2">
-<div class="block">
-<h3><a href="https://idamais.com.br/" rel="noopener" target="_blank">🌐 IDA+</a></h3>
-<div class="meta skills">Update of Brazil’s main sustainability index for ports and terminals</div>
-</div>
-<div class="block">
-<h3><a href="https://www.labportos.log.br/institucional.html" rel="noopener" target="_blank">🌐 LabPortos</a></h3>
-<div class="meta skills">Innovation and technical studies on port operations</div>
-</div>
-<div class="block">
-<h3><a href="https://observatorioportuario.com.br/sobre/" rel="noopener" target="_blank">🌐 Observatório Portuário</a></h3>
-<div class="meta skills">Monitoring port indicators and informing decision-makers</div>
-</div>
-<div class="block">
-<h3><a href="https://cess.uff.br/pessoas/" rel="noopener" target="_blank">🌐 CESS</a></h3>
-<div class="meta skills">Sustainability, energy transition and territorial development</div>
-</div>
-</div>
-</div>
-</section>
-</div>
-<script>
-(function(){
-  const tabs = Array.from(document.querySelectorAll('[role="tab"]'));
-  const panels = Array.from(document.querySelectorAll('.panel'));
 
-  function activate(id){
-    panels.forEach(p => p.classList.toggle('active', '#' + p.id.replace('panel-', '') === id));
-    tabs.forEach(t => {
-      const match = t.getAttribute('href') === id;
-      t.setAttribute('aria-selected', match ? 'true' : 'false');
-      t.tabIndex = match ? 0 : -1;
-    });
-  }
+    <a class="btn" href="https://www.darlianecunha.com" target="_blank" rel="noopener">
+      www.darlianecunha.com
+    </a>
 
-  tabs.forEach(t => t.addEventListener('click', e => {
-    e.preventDefault();
-    const id = t.getAttribute('href');
-    history.pushState(null, '', id);
-    activate(id);
-  }));
+    <div class="small">
+      Thank you for your visit.
+    </div>
 
-  window.addEventListener('popstate', () => activate(location.hash || '#summary'));
-
-  activate(location.hash || '#summary');
-})();
-</script>
+  </main>
 </body>
 </html>
